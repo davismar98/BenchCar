@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_card">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:elevation="3dp"
+        card_view:cardCornerRadius="1dp"
+        card_view:cardElevation="4dp"
+        card_view:cardUseCompatPadding="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="5dp">
+
+            <ImageView
+                android:id="@+id/img_carro"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/txt_usuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_carro"
+                android:gravity="center_horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:text="test"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/txt_comentario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_usuario"
+                android:gravity="center_horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="test"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:typeface="sans" />
+
+            <RatingBar
+                android:id="@+id/rb_calificacion"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_comentario"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:numStars="10"
+                android:paddingTop="5dp" />
+
+
+            <RelativeLayout
+                android:id="@+id/imagenes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rb_calificacion">
+
+                <TextView
+                    android:id="@+id/txt_calificacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="100" />
+
+                <ImageView
+                    android:id="@+id/img_pais"
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="3sp"
+                    android:layout_marginEnd="10sp"
+                    android:layout_marginTop="5sp"
+                    card_view:srcCompat="@drawable/alemania" />
+
+                <ImageView
+                    android:id="@+id/img_marca"
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="3sp"
+                    android:layout_marginRight="5sp"
+                    android:layout_marginTop="5sp"
+                    android:layout_toStartOf="@+id/img_pais"
+                    card_view:srcCompat="@drawable/audi" />
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
